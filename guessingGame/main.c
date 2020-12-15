@@ -42,7 +42,15 @@ int main(){
   printf("computer : %d", computerThink);
   printf("\nchoose your guess:");
   scanf("%d", &guess);
-  while (guess != computerThink && guessCount < guessLimit){    
+  while (guess != computerThink && guessCount < guessLimit){
+    if (guess < computerThink){
+      printf("Cold! Your kick was too low");
+    }
+    if (guess > computerThink)
+    {
+      printf("Cold Your kick was too high");
+    }
+    
     printf("\nchoose your guess:");
     scanf("%d", &guess);
     guessCount ++;
@@ -51,12 +59,12 @@ int main(){
   if (guess == computerThink)
   {
     printf("\n-----------------------");
-    printf("\nYou win!!");
+    printf("\n\tYou win!!");
     printf("\n-----------------------");
   }
   else{
     printf("\n-----------------------");
-    printf("\nYou lose!");
+    printf("\n\tYou lose!");
     printf("\n-----------------------");
   }    
 
