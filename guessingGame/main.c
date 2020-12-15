@@ -23,27 +23,42 @@ int main(){
   printf("\n1-)Easy 2-)Normal 3-)Hard\n===> ");
   scanf ("%d", &difficulty);
   if (difficulty == 1)
-  {
-    guessLimit = 10;
-  }
+    {
+      guessLimit = 9;
+    }
   else if (difficulty == 2)
-  {
-    guessLimit = 6;
-  }
+    {
+      guessLimit = 5;
+    }
   else if (difficulty == 3)
-  {
-    guessLimit = 3;
-  }
+    {
+      guessLimit = 2;
+    }
   //start oh the game
   int guessCount = 0;
   int guess;
   srand(time(NULL));
-  int computerThink = rand() %;
+  int computerThink = rand() %5 + 1;
   printf("computer : %d", computerThink);
   printf("\nchoose your guess:");
-  scanf("%d", guess);
-  
-  //end of the game    
+  scanf("%d", &guess);
+  while (guess != computerThink && guessCount < guessLimit){    
+    printf("\nchoose your guess:");
+    scanf("%d", &guess);
+    guessCount ++;
+  }   
+  //end of the game
+  if (guess == computerThink)
+  {
+    printf("\n-----------------------");
+    printf("\nYou win!!");
+    printf("\n-----------------------");
+  }
+  else{
+    printf("\n-----------------------");
+    printf("\nYou lose!");
+    printf("\n-----------------------");
+  }    
 
 }
 
