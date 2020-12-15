@@ -14,13 +14,14 @@ int main(){
     printf("******************************");
     printf("\n*welcome to the guessing game*");
     printf("\n******************************");
+    
   //choise of difficulty
   int difficulty;
   int guessLimit;  
   printf("\n\n-----------------------");
   printf("\n Choise the difficulty");
   printf("\n-----------------------");
-  printf("\n1-)Easy 2-)Normal 3-)Hard\n===> ");
+  printf("\n1-)Easy (guess limit 10) \n2-)Normal (guess limit 6) \n3-)Hard (guess limit 3\n===> ");
   scanf ("%d", &difficulty);
   if (difficulty == 1)
     {
@@ -39,16 +40,26 @@ int main(){
   int guess;
   srand(time(NULL));
   int computerThink = rand() %5 + 1;
-  printf("computer : %d", computerThink);
+  int score = 10;
+  printf("computer: %d", computerThink);
+  printf("\n------------------------");
+  printf("\n-guess the scret number-");
+  printf("\n------------------------");
   printf("\nchoose your guess:");
   scanf("%d", &guess);
   while (guess != computerThink && guessCount < guessLimit){
+    score--;
     if (guess < computerThink){
-      printf("Cold! Your kick was too low");
+      
+      printf("\nCold! Your kick was too low");      
+      printf("\n---------------------------");
+      score--;
     }
     if (guess > computerThink)
     {
-      printf("Cold Your kick was too high");
+      printf("\nCold Your kick was too high");
+      printf("\n---------------------------");
+      score--;
     }
     
     printf("\nchoose your guess:");
@@ -60,11 +71,14 @@ int main(){
   {
     printf("\n-----------------------");
     printf("\n\tYou win!!");
+    printf("\n  **Congratulations**");
+    printf("\n     Score ==== %d ",score);
     printf("\n-----------------------");
   }
   else{
     printf("\n-----------------------");
     printf("\n\tYou lose!");
+    printf("\nsecreat number is ==> %d", computerThink);
     printf("\n-----------------------");
   }    
 
