@@ -9,7 +9,7 @@ Wjich each error, the machine wil tell you whether the number kicked was greater
 */
 
 int main(){
-    int secretNumber, guess, try, dificulty, guessLimit;
+    int secretNumber, guess, try, dificulty, guessLimit, score;
     //presentation
     printf("\n-=-=-Wellcome to the guessing game-=-=-\n");
     printf("\n-=-=--=-=--=-=--=-=--=-=--=-=--=-=--=-=-\n");
@@ -62,7 +62,9 @@ int main(){
             
         }  
     }
-    printf("\nEND GMAE");
+    score = 100;
+    float finalScore = abs(score - (guessLimit - limit))/2.0;
+    printf("\nEND GMAE\n = Your score are: %f", finalScore);
 
 
  
