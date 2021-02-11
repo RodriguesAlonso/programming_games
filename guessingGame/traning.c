@@ -16,15 +16,18 @@ int main(){
     //chose dificulty    
     printf("\n-=-=-choise the difficulty-=-=-\n1 - Easy\n2 - Normal\n3 - Hard ");
     scanf("%d", &dificulty);
-    if (dificulty == 1){
-        guessLimit = 10;
-    }else if (dificulty == 2){
-    
-        guessLimit = 6;
-    }
-    else if (dificulty == 3)
+    switch (dificulty)
     {
+    case 1:
+        guessLimit = 10;
+        score = 3;
+        break;
+    case 2:
+        guessLimit = 6;
+        score = 5;
+    case 3:
         guessLimit = 3;
+        score = 10;
     }
     printf("\n-=-=--=-=--=-=--=-=--=-=--=-=--=-=--=-=-\n");
 
@@ -61,10 +64,9 @@ int main(){
             scanf("%d", &guess);
             
         }  
-    }
-    score = 100;
-    float finalScore = abs(score - (guessLimit - limit))/2.0;
-    printf("\nEND GMAE\n = Your score are: %f", finalScore);
+    }    
+    int finalScore = (limit - 1) * (score);
+    printf("\nEND GMAE\n = Your score are: %d", finalScore);
 
 
  
