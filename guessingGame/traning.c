@@ -11,7 +11,7 @@ Wjich each error, the machine wil tell you whether the number kicked was greater
 int main(){
     int secretNumber, guess, try, dificulty, guessLimit, score;
     //presentation
-    printf("\n-=-=-Wellcome to the guessing game-=-=-\n");
+    printf("\n-=-=-Wellcome to the guessing game-=-=-\n");   
     printf("\n-=-=--=-=--=-=--=-=--=-=--=-=--=-=--=-=-\n");
     //chose dificulty    
     printf("\n-=-=-choise the difficulty-=-=-\n1 - Easy\n2 - Normal\n3 - Hard ");
@@ -25,9 +25,11 @@ int main(){
     case 2:
         guessLimit = 6;
         score = 5;
+        break;
     case 3:
         guessLimit = 3;
         score = 10;
+        break;
     }
     printf("\n-=-=--=-=--=-=--=-=--=-=--=-=--=-=--=-=-\n");
 
