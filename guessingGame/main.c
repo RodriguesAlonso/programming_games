@@ -81,7 +81,7 @@ int main(){
     printf("\nsecreat number is ==> %d", computerThink);
     printf("\n-----------------------");
   }    
-  system("pouse");
+  system("pause");
 }
 
 
