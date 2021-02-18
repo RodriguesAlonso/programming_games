@@ -3,6 +3,10 @@
 
 int main()
 {
+    char palavra[20];
+    sprintf(palavra, "MELANCIA");
+    printf("%s", palavra);
+
     
     return 0;
 }
