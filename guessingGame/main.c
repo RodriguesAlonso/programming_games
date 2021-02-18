@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+# define EASY 9
+# define NORMAL 5
+# define HARD 2
 /*
 Rules
 The computer will think of a number, and you, the player, will need guess it.
@@ -25,15 +28,15 @@ int main(){
   scanf ("%d", &difficulty);
   if (difficulty == 1)
     {
-      guessLimit = 9;
+      guessLimit = EASY;
     }
   else if (difficulty == 2)
     {
-      guessLimit = 5;
+      guessLimit = NORMAL;
     }
   else if (difficulty == 3)
     {
-      guessLimit = 2;
+      guessLimit = HARD;
     }
   //start oh the game
   int guessCount = 0;
