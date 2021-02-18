@@ -37,19 +37,17 @@
     }*/
 // system("pause");
 // # define NUMERO_CONSTANTE 3
+
+/*O C automaticamente imprime várias casas decimais quando usamos
+a máscara %f no printf(). %.2f, 2 casas decimais:
+printf("Você fez %.2f pontos\n", pontos);*/
 int main()
 {
-  int nun;
-  int acerto = 0;
-  printf("digite um numero");
-  scanf("%d", nun);
-  while (!acerto)
-  {
-      if(nun<0){
-          printf("Numero invalido");
-          continue;
-
-      }
-  }
+  int a = 10;
+  int b = 3;
+  float div = ((float)a /(float)b);
+    printf("%.4f", div);
+    
+  return 0;
   
 }
